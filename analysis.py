@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import time
+from functools import lru_cache
 from typing import Iterable
 
 import numpy as np
@@ -33,11 +34,17 @@ def score_lexicon(texts: list[str]) -> list[dict[str, float]]:
     return rows
 
 
-def score_finbert(texts: list[str]) -> list[dict[str, float]]:
-    """Score using ProsusAI/finbert; weights download on first call."""
+@lru_cache(maxsize=1)
+def _finbert_classifier():
+    """Load one classifier per app process; weights download on first call."""
     from transformers import pipeline
 
-    classifier = pipeline("text-classification", model="ProsusAI/finbert", tokenizer="ProsusAI/finbert", top_k=None, truncation=True)
+    return pipeline("text-classification", model="ProsusAI/finbert", tokenizer="ProsusAI/finbert", top_k=None, truncation=True)
+
+
+def score_finbert(texts: list[str]) -> list[dict[str, float]]:
+    """Score using ProsusAI/finbert; weights download on first call."""
+    classifier = _finbert_classifier()
     outputs = classifier([str(t)[:4000] for t in texts], batch_size=16)
     normalized = []
     for output in outputs:
