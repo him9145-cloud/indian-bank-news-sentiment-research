@@ -1,5 +1,7 @@
 # Banking News Sentiment and Market Reactions
 
+**Live dashboard:** https://indian-bank-news-sentiment-research-endumrcwk96ujqm55mgu4b.streamlit.app/
+
 Research project studying whether financial news sentiment is associated with short-term returns and unusual trading activity for Indian listed banks. This is an academic research tool, not investment advice or a trading signal.
 
 ## Research question
