@@ -1,0 +1,7 @@
+published_at,ticker,headline,text,source,url
+2025-01-06T10:20:00+05:30,BANKA,Sample: Bank A reports stronger quarterly deposit growth,,Demo Source,https://example.com/a1
+2025-01-07T16:05:00+05:30,BANKA,Sample: Bank A faces higher provisions after review,,Demo Source,https://example.com/a2
+2025-01-08T13:10:00+05:30,BANKB,Sample: Bank B expands small business lending,,Demo Source,https://example.com/b1
+2025-01-09T14:40:00+05:30,BANKB,Sample: Analysts flag rising bad loans at Bank B,,Demo Source,https://example.com/b2
+2025-01-10T11:15:00+05:30,BANKC,Sample: Bank C posts record quarterly profit,,Demo Source,https://example.com/c1
+2025-01-13T15:55:00+05:30,BANKA,Sample: Bank A receives regulatory penalty,,Demo Source,https://example.com/a3
