@@ -36,6 +36,8 @@ News timestamps should include a timezone where possible (for example `2025-01-1
 
 Price dates should use the exchange trading date. If only `close` is supplied, simple close-to-close returns are used. Add a benchmark close series repeated for each ticker/date to estimate market-adjusted returns. The dashboard shows associations and descriptive event comparisons; it does not establish causality.
 
+For the HDFC Bank 2023–2026 study scope, see [DATA_SOURCES.md](DATA_SOURCES.md) and the blank CSV templates in `data/`.
+
 ## Research plan
 
 1. Define the sample of banks, study window, source inclusion rules, and duplicate handling before collecting data.
